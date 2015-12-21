@@ -9,10 +9,21 @@
 ```
 
 ## Tag Personalization
+add personalization confif script to the page
+```js
+<script>
+        window.cmTagConfig = {
+            isDebug: true,
+            onOutOfView: "detach"
+        };
+</script>
+```
 ### Options
 #### isDebug
 accepts: true/false
-sets 
+
+#### onOutOfView
+accepts: "none","pause","detach"
 
 ### Example
 ```js
