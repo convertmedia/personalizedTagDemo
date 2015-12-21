@@ -5,8 +5,9 @@ place the tag script in the page
 ```js
  <!-- BEGIN CONVERTMEDIA JS TAG --><SCRIPT type="text/javascript" SRC="//15.basebanner.com/BidRHanSer?oid=15&width=2&height=2&pubid=150987&tagid=865107&pstn=ENTER_PLACEMENT_ID_HERE&noaop=1&revmod=INSERT_CONTENT_TYPE&encoded=1&cb=INSERT_CACHEBUSTER&keywords=INSERT_COMMA_SEPARATED_KEYWORDS&callback=document.write&urlonly=1"></SCRIPT>
 ```
-```js
+
 ## Personalization how to:
+```js
 <script>
         window.cmTagConfig = {
             isDebug: true,
@@ -24,5 +25,5 @@ place the tag script in the page
                 }
             }
         };
-  <script>
+  </script>
 ```
