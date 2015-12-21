@@ -13,10 +13,24 @@
 #### isDebug
 accepts: true/false
 sets 
-1. Add personaliztion script to the page 
+
+### Example
 ```js
 <script>
         window.cmTagConfig = {
+            isDebug: true,
+            onOutOfView: "detach",
+            demandConfig: {
+                waterfall: {
+                    "totalTimeout": 180,
+                    "tags": [
+                        {
+                            pixel:"http://localhost/pixel",
+                            "url": "http://ad4.liverail.com/?LR_PUBLISHER_ID=151025&LR_SCHEMA=vast2-vpaid&LR_TITLE=%%title%%&LR_VIDEO_ID=%%video-url%%&LR_DURATION=30&LR_AUTOPLAY=1&LR_MUTED=0&LR_VERTICALS=%%VERTICAL%%&LR_TAGS=%%tag%%&LR_URL=%%domain%%"
+                        }
+                    ]
+                }
+            }
         };
- </script>
+    </script>
 ```
