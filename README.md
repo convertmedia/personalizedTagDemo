@@ -9,6 +9,10 @@
 ```
 
 ## Tag Personalization
+### Options
+#### isDebug
+accepts: true/false
+sets 
 1. Add personaliztion script to the page 
 ```js
 <script>
