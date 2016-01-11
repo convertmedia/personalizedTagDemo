@@ -43,6 +43,20 @@ accepts: "none","pause","detach"
 #### viewPercent
 accepts: numbers 0...100
 
+#### parentSelector
+accepts: js/css selector/ array of js/css selectors
+ default: no selector (the video will open next to the tag placement)
+```js
+//one selector
+window.cmTagConfig = {
+   parentSelectr:"div.block.B3 > div:nth-child(1)"
+}
+//array of selectors
+window.cmTagConfig = {
+   parentSelectr:["article","#div1","div.block.B3 > div:nth-child(1)"]
+}
+```
+
 ### Options For Interstital Unit Only
 #### onClose
 accepts:"detach"/"none"
