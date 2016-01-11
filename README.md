@@ -19,11 +19,62 @@ add personalization confif script to the page
 </script>
 ```
 ### Options
+
+#### unitType
+accepts: "INLINE"/"INTERSTITIAL"/"SLIDER"
+
 #### isDebug
 accepts: true/false
 
+
+#### closeButton
+**hasCloseButton**
+
+accepts: true/fale
+
+**secondsToCloseButton**
+
+accepts: number 0...60
+
+### Options For Inline Unit Only
 #### onOutOfView
 accepts: "none","pause","detach"
+
+#### viewPercent
+accepts: numbers 0...100
+
+### Options For Interstital Unit Only
+#### onClose
+accepts:"detach"/"none"
+default value:"none"
+
+#### secondsToAd
+accepts: number 0...60
+default value:3
+
+#### width
+accepts: number 500...1000
+default:9000
+
+### Options For Slider Unit Only
+#### secondsToAd
+accepts: number 0...60
+default value:3
+
+#### width
+accepts: number 300...1000
+default:402
+
+#### position
+**horizontal**
+
+accepts:"right"/"left"
+default:"right"
+
+**vertical**
+
+accepts: "top"/"middle"/"bottom"
+defautl: "bottom"
 
 ### Example
 ```js
