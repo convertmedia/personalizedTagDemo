@@ -21,14 +21,16 @@ add personalization confif script to the page
 ### Options
 
 #### unitType
-accepts: "INLINE"/"INTERSTITIAL"/"SLIDER"
+accepts: "INLINE"/"INTERSTITIAL"/"SLIDER" </br>
+default: "INLINE" </br>
 ```js
 window.cmTagConfig = {
    unitType:"INLINE"
 }
 ```
 #### isDebug
-accepts: true/false
+accepts: true/false</br>
+default: false </br>
 ```js
 window.cmTagConfig = {
    isDebug:true
@@ -36,14 +38,12 @@ window.cmTagConfig = {
 ```
 
 #### closeButton
-**hasCloseButton**
-
-accepts: true/fale
-default: true
-**secondsToCloseButton**
-
-accepts: number 0...60
-default: 5
+**hasCloseButton** </br>
+accepts: true/fale </br>
+default: true </br>
+**secondsToCloseButton** </br>
+accepts: number 0...60 </br>
+default: 5 </br>
 ```js
 window.cmTagConfig = {
    closeButton:{
@@ -54,24 +54,24 @@ window.cmTagConfig = {
 ```
 ### Options For Inline Unit Only
 #### onOutOfView
-accepts: "none","pause","detach"
-default:"pause"
+accepts: "none","pause","detach" </br>
+default:"pause" </br>
 ```js
 window.cmTagConfig = {
    onOutOfView:"detach"
 }
 ```
 #### viewPercent
-accepts: numbers 0...100
-default:20
+accepts: numbers 0...100 </br>
+default:20 </br>
 ```js
 window.cmTagConfig = {
    viewPercent:50
 }
 ```
 #### parentSelector
-accepts: js/css selector/ array of js/css selectors
- default: no selector (the video will open next to the tag placement)
+accepts: js/css selector/ array of js/css selectors </br>
+ default: no selector (the video will open next to the tag placement) </br>
 ```js
 //one selector
 window.cmTagConfig = {
@@ -85,24 +85,24 @@ window.cmTagConfig = {
 
 ### Options For Interstital Unit Only
 #### onClose
-accepts:"detach"/"none"
-default value:"none"
+accepts:"detach"/"none" </br>
+default value:"none" </br>
 ```js
 window.cmTagConfig = {
    onClose:"detach"
 }
 ```
 #### secondsToAd
-accepts: number 0...60
-default value:3
+accepts: number 0...60 </br>
+default value:3 </br>
 ```js
 window.cmTagConfig = {
    secondsToAd:5
 }
 ```
 #### width
-accepts: number 500...1000
-default:900
+accepts: number 500...1000 </br>
+default:900 </br>
 ```js
 window.cmTagConfig = {
    width:850
@@ -112,23 +112,20 @@ window.cmTagConfig = {
 
 ### Options For Slider Unit Only
 #### secondsToAd
-accepts: number 0...60
-default value:3
+accepts: number 0...60 </br>
+default value:3 </br>
 
 #### width
-accepts: number 300...1000
-default:402
+accepts: number 300...1000 </br>
+default:402 </br>
 
 #### position
-**horizontal**
-
-accepts:"right"/"left"
-default:"right"
-
-**vertical**
-
-accepts: "top"/"middle"/"bottom"
-defautl: "bottom"
+**horizontal** </br>
+accepts:"right"/"left" </br>
+default:"right" </br>
+**vertical** </br>
+accepts: "top"/"middle"/"bottom" </br>
+defautl: "bottom" </br>
 ```js
 window.cmTagConfig = {
    position:{
@@ -139,7 +136,7 @@ window.cmTagConfig = {
 ```
 ### Upcoming Options (next release features)
 #### onReady
-accepts: callback
+accepts: callback 
 ```js
 window.cmTagConfig = {
    onReady:function(){
