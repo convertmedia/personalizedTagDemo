@@ -90,6 +90,45 @@ default:"right"
 accepts: "top"/"middle"/"bottom"
 defautl: "bottom"
 
+### Upcoming Options (next release features)
+#### onReady
+accepts: callback
+```js
+window.cmTagConfig = {
+   onReady:function(){
+     console.log("the adUnit is ready");
+   }
+}
+```
+#### onConversion
+accepts: callback
+```js
+window.cmTagConfig = {
+   onConversion:function(){
+     console.log("the adUnit is playing the video ad");
+   }
+}
+```
+#### onAdDone
+accepts: callback
+```js
+window.cmTagConfig = {
+   onAdDone:function(){
+     console.log("the adUnit is playing done playing the video ad ");
+   }
+}
+```
+#### onClosedByUser
+accepts: callback
+```js
+window.cmTagConfig = {
+   onClosedByUser:function(){
+     console.log("the user closed clicked on the close button");
+   }
+}
+```
+
+
 ### Example
 ```js
 <script>
