@@ -19,11 +19,159 @@ add personalization confif script to the page
 </script>
 ```
 ### Options
-#### isDebug
-accepts: true/false
 
+#### unitType
+accepts: "INLINE"/"INTERSTITIAL"/"SLIDER" </br>
+default: "INLINE" </br>
+```js
+window.cmTagConfig = {
+   unitType:"INLINE"
+}
+```
+#### isDebug
+accepts: true/false</br>
+default: false </br>
+```js
+window.cmTagConfig = {
+   isDebug:true
+}
+```
+
+#### closeButton
+**hasCloseButton** </br>
+accepts: true/fale </br>
+default: true </br>
+**secondsToCloseButton** </br>
+accepts: number 0...60 </br>
+default: 5 </br>
+```js
+window.cmTagConfig = {
+   closeButton:{
+     hasCloseButton:true,
+     secondsToCloseButton:10
+   }
+}
+```
+### Options For Inline Unit Only
 #### onOutOfView
-accepts: "none","pause","detach"
+accepts: "none","pause","detach" </br>
+default:"pause" </br>
+```js
+window.cmTagConfig = {
+   onOutOfView:"detach"
+}
+```
+#### viewPercent
+accepts: numbers 0...100 </br>
+default:20 </br>
+```js
+window.cmTagConfig = {
+   viewPercent:50
+}
+```
+#### parentSelector
+accepts: js/css selector/ array of js/css selectors </br>
+ default: no selector (the video will open next to the tag placement) </br>
+```js
+//one selector
+window.cmTagConfig = {
+   parentSelectr:"div.block.B3 > div:nth-child(1)"
+}
+//array of selectors
+window.cmTagConfig = {
+   parentSelectr:["article","#div1","div.block.B3 > div:nth-child(1)"]
+}
+```
+
+### Options For Interstital Unit Only
+#### onClose
+accepts:"detach"/"none" </br>
+default value:"none" </br>
+```js
+window.cmTagConfig = {
+   onClose:"detach"
+}
+```
+#### secondsToAd
+accepts: number 0...60 </br>
+default value:3 </br>
+```js
+window.cmTagConfig = {
+   secondsToAd:5
+}
+```
+#### width
+accepts: number 500...1000 </br>
+default:900 </br>
+```js
+window.cmTagConfig = {
+   width:850
+}
+```
+*the height is auto calculated
+
+### Options For Slider Unit Only
+#### secondsToAd
+accepts: number 0...60 </br>
+default value:3 </br>
+
+#### width
+accepts: number 300...1000 </br>
+default:402 </br>
+
+#### position
+**horizontal** </br>
+accepts:"right"/"left" </br>
+default:"right" </br>
+**vertical** </br>
+accepts: "top"/"middle"/"bottom" </br>
+defautl: "bottom" </br>
+```js
+window.cmTagConfig = {
+   position:{
+     horizontal:"right",
+     vertical:"top"
+   }
+}
+```
+### Upcoming Options (next release features)
+#### onReady
+accepts: callback 
+```js
+window.cmTagConfig = {
+   onReady:function(){
+     console.log("the adUnit is ready");
+   }
+}
+```
+#### onConversion
+accepts: callback
+```js
+window.cmTagConfig = {
+   onConversion:function(){
+     console.log("the adUnit is playing the video ad");
+   }
+}
+```
+#### onAdDone
+accepts: callback
+```js
+window.cmTagConfig = {
+   onAdDone:function(){
+     console.log("the adUnit is playing done playing the video ad ");
+   }
+}
+```
+#### onClosedByUser
+accepts: callback
+```js
+window.cmTagConfig = {
+   onClosedByUser:function(){
+     console.log("the user closed clicked on the close button");
+   }
+}
+```
+
 
 ### Example
 ```js
