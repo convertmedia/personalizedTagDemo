@@ -22,27 +22,53 @@ add personalization confif script to the page
 
 #### unitType
 accepts: "INLINE"/"INTERSTITIAL"/"SLIDER"
-
+```js
+window.cmTagConfig = {
+   unitType:"INLINE"
+}
+```
 #### isDebug
 accepts: true/false
-
+```js
+window.cmTagConfig = {
+   isDebug:true
+}
+```
 
 #### closeButton
 **hasCloseButton**
 
 accepts: true/fale
-
+default: true
 **secondsToCloseButton**
 
 accepts: number 0...60
-
+default: 5
+```js
+window.cmTagConfig = {
+   closeButton:{
+     hasCloseButton:true,
+     secondsToCloseButton:10
+   }
+}
+```
 ### Options For Inline Unit Only
 #### onOutOfView
 accepts: "none","pause","detach"
-
+default:"pause"
+```js
+window.cmTagConfig = {
+   onOutOfView:"detach"
+}
+```
 #### viewPercent
 accepts: numbers 0...100
-
+default:20
+```js
+window.cmTagConfig = {
+   viewPercent:50
+}
+```
 #### parentSelector
 accepts: js/css selector/ array of js/css selectors
  default: no selector (the video will open next to the tag placement)
@@ -61,14 +87,28 @@ window.cmTagConfig = {
 #### onClose
 accepts:"detach"/"none"
 default value:"none"
-
+```js
+window.cmTagConfig = {
+   onClose:"detach"
+}
+```
 #### secondsToAd
 accepts: number 0...60
 default value:3
-
+```js
+window.cmTagConfig = {
+   secondsToAd:5
+}
+```
 #### width
 accepts: number 500...1000
-default:9000
+default:900
+```js
+window.cmTagConfig = {
+   width:850
+}
+```
+*the height is auto calculated
 
 ### Options For Slider Unit Only
 #### secondsToAd
@@ -89,7 +129,14 @@ default:"right"
 
 accepts: "top"/"middle"/"bottom"
 defautl: "bottom"
-
+```js
+window.cmTagConfig = {
+   position:{
+     horizontal:"right",
+     vertical:"top"
+   }
+}
+```
 ### Upcoming Options (next release features)
 #### onReady
 accepts: callback
